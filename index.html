@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chespirito fora do ar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    #contador {
+      font-size: 50px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    img {
+      max-width: 90%;
+      width: 400px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quantos dias o programa Chespirito está fora do ar?</h1>
+
+  <div id="contador">Carregando...</div>
+
+ <img src="chespirito.gif" alt="Personagens do Chespirito">
+
+  <script>
+    const dataInicial = new Date("2020-07-31");
+    const hoje = new Date();
+
+    const diferenca = hoje - dataInicial;
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+    document.getElementById("contador").innerText = dias + " dias";
+  </script>
+
+</body>
+</html>
