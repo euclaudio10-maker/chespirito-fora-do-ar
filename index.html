@@ -34,16 +34,21 @@
 
  <img src="chespirito.gif" alt="Personagens do Chespirito">
 
-  <script>
-    const dataInicial = new Date("2020-08-01");
-    const hoje = new Date();
+<script>
+  // Data inicial: 31 de julho de 2020
+  // (mês começa em 0 → julho = 6)
+  const dataInicial = new Date(2020, 6, 31, 12);
 
-    const diferenca = hoje - dataInicial;
-    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const hoje = new Date();
+  hoje.setHours(12, 0, 0, 0); // fixa no meio-dia para evitar adiantamento
 
-    document.getElementById("contador").innerText = dias + " dias";
-  </script>
+  const diferenca = hoje - dataInicial;
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+  document.getElementById("contador").innerText = dias + " dias";
+</script>
 
 </body>
 </html>
+
 
